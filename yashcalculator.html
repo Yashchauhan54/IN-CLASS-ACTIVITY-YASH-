@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yash'sCalculator</title>
+</head>
+<body>
+
+
+    <div>
+
+        <p>Input 1: <input type="text" id="input1" > </p> 
+        <p>Input 2: <input type="text" id="input2" > </p>  
+        <p>
+            Operator: 
+
+            <button class="b1" onclick="add()">+</button> 
+            <button class="b1" onclick="sub()">-</button> 
+            <button class="b1" onclick="multiply()">*</button> 
+            <button class="b1" onclick="division()">/</button>
+         </p> 
+        <p>Result:</p> <p id="result"></p>
+
+
+        <script>
+
+            function add(){
+
+                var x=parseFloat(document.getElementById("input1").value);
+                var y=parseFloat(document.getElementById("input2").value);
+
+                var z=x+y;
+
+                document.getElementById("result").innerHTML=x+"+"+y+"="+z;
+
+                 
+            }
+
+            function sub(){
+                var x=parseFloat(document.getElementById("input1").value);
+                var y=parseFloat(document.getElementById("input2").value);
+                
+                var z=x-y;
+
+                document.getElementById("result").innerHTML=x+"-"+y+"="+z;
+
+
+            }
+
+            function multiply(){
+                var x=parseFloat(document.getElementById("input1").value);
+                var y=parseFloat(document.getElementById("input2").value);
+                
+                var z=x*y;
+
+                document.getElementById("result").innerHTML=x+"*"+y+"="+z;
+            }
+
+            function division(){
+                var x=parseFloat(document.getElementById("input1").value);
+                var y=parseFloat(document.getElementById("input2").value);
+                
+                var z=x/y;
+
+                document.getElementById("result").innerHTML=x+"/"+y+"="+z;
+            
+            }
+
+
+
+
+        </script>
+        <style>
+            .b1{
+                background-color: aqua;
+                color: rgb(15, 14, 13);
+            }
+            .b1:hover{
+                background-color: lightyellow;
+                color: rgb(133, 7, 59);
+            }
+        </style>
+
+
+
+
+
+    </div>
+
+</body>
+</html>
