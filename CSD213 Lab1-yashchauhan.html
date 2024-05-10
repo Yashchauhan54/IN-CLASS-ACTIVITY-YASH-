@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<h1>Yash'sTable</h1>
+<body>
+<table id="chauhan'sTable" border="3"> 
+  <tr>
+    <td>Row1 Col1</td> 
+    <td>Row1 Col2</td>
+  </tr> 
+  <tr>
+    <td>Row2 Col1</td> 
+    <td>Row2 Col2</td>
+  </tr> 
+    <tr>
+    <td>Row3 Col1</td> 
+    <td>Row3 Col2</td>
+  </tr> 
+    <tr>
+    <td>Row4 Col1</td> 
+    <td>Row4 Col2</td>
+  </tr> 
+    <tr>
+    <td>Row5 Col1</td> 
+    <td>Row5 Col2</td>
+  </tr> 
+</table><br> 
+<input type="button" class="b1" onclick="insertRowBottom()" value="Insert row">  
+<input type="button" class="b2" onclick="deleteRowTop()" value="delete row">
+<p id="message" style="color:darkred" style="font-size: 10;">message:</p>
+
+
+
+</br>
+<script>
+
+// add code here
+
+var x=5;
+
+function insertRowBottom(){
+
+
+
+  var mytable= document.getElementById("chauhan'sTable");
+
+  x++;
+
+  var myrow = mytable.insertRow(-1);
+  var tablecell1 = myrow.insertCell(0);
+  var tablecell2 = myrow.insertCell(1);
+  tablecell1.innerHTML = "Row"+x+" Col1";
+  tablecell2.innerHTML = "Row"+x+" Col2";
+
+  var z=parseInt(mytable.rows.length);
+  if(z==1){
+    document.getElementById("message").innerHTML="";
+  }
+
+
+}
+
+function deleteRowTop(){
+
+  var mytable= document.getElementById("chauhan'sTable");
+  var counter=mytable.rows.length;
+  
+  //alert(mytable.rows.length)
+
+  var z=parseInt(mytable.rows.length);
+  if(z==0){
+    document.getElementById("message").innerHTML="No more Rows to delete";
+  }else if(z==1){
+    document.getElementById("message").innerHTML="";
+  }
+
+  mytable.deleteRow(0);
+
+
+}
+
+
+
+</script>
+
+<style>
+  h1{
+    color: rgb(18, 184, 230);
+    font-size: 10;
+    font-style: italic;
+    
+  }
+
+  body{
+    color: black;
+    font: bold;
+    font-style: italic;
+  }
+
+  .b1{
+                background-color:lightgreen;
+                color: rgb(21, 6, 72);
+            }
+            .b1:hover{
+                background-color:lightblue;
+                color: rgb(20, 2, 10);
+            }
+  
+  .b2{
+                background-color:rgb(227, 27, 57);
+                color: white;
+            }
+            .b2:hover{
+                background-color: lightblue;
+                color:rgb(15, 15, 15);
+            }
+</style>
+
+
+
+
+</body>
+</html>
